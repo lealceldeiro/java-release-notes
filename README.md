@@ -40,3 +40,5 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * JNI bridge to native JGSS on Mac OS X.
 * Support for stronger strength ephemeral DH keys in the SunJSSE provider.
 * Support for server-side cipher suites preference customization in JSSE.
+
+### [JavaFX](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
