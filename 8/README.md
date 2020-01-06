@@ -108,7 +108,7 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 
 ### [Scripting](http://docs.oracle.com/javase/8/docs/technotes/guides/scripting/enhancements.html#jdk8)
 
-* The *Rhino* javascript engine has been replaced with the [Nashorn](http://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/) Javascript Engine.
+* The *Rhino* javascript engine has been replaced with the [*Nashorn*](http://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/) Javascript Engine.
 
 ### [Internationalization](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/enhancements.8.html)
 
