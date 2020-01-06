@@ -55,6 +55,8 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 
 * JDK 8 includes Java DB 10.10.
 
+### Java [XML](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/enhancements.html) - [JAXP](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxp/enhancements-8.html)
+
 ### [Networking](https://docs.oracle.com/javase/8/docs/technotes/guides/net/enhancements-8.0.html)
 
 * The class `java.net.URLPermission` has been added.
