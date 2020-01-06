@@ -64,6 +64,11 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * New Calendar and Locale APIs
 * Ability to Install a Custom Resource Bundle as an Extension
 
+### [Deployment](https://docs.oracle.com/javase/8/docs/technotes/guides/jweb/enhancements-8.html)
+
+* For sandbox applets and Java Web Start applications, URLPermission is now used to allow connections back to the server from which they were started. SocketPermission is no longer granted.
+* The Permissions attribute is required in the JAR file manifest of the main JAR file at all security levels.
+
 ### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
 
 ### [JavaFX](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
