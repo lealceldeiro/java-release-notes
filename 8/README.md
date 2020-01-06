@@ -32,6 +32,15 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * Standard Encoding and Decoding Base64
 * Unsigned Arithmetic Support
 
+### [JDBC](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)
+
+* The JDBC-ODBC Bridge has been removed.
+* JDBC 4.2 introduces new features.
+
+### Java DB
+
+* JDK 8 includes Java DB 10.10.
+
 ### [IO and NIO](https://docs.oracle.com/javase/8/docs/technotes/guides/io/enhancements.html#jdk8)
 
 * New `SelectorProvider` implementation for Solaris based on the Solaris event port mechanism. To use, run with the system property `java.nio.channels.spi.Selector` set to the value `sun.nio.ch.EventPortSelectorProvider`.
