@@ -41,6 +41,11 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 
 * JDK 8 includes Java DB 10.10.
 
+### [Networking](https://docs.oracle.com/javase/8/docs/technotes/guides/net/enhancements-8.0.html)
+
+* The class `java.net.URLPermission` has been added.
+* In the class `java.net.HttpURLConnection`, if a security manager is installed, calls that request to open a connection require permission.
+
 ### [IO and NIO](https://docs.oracle.com/javase/8/docs/technotes/guides/io/enhancements.html#jdk8)
 
 * New `SelectorProvider` implementation for Solaris based on the Solaris event port mechanism. To use, run with the system property `java.nio.channels.spi.Selector` set to the value `sun.nio.ch.EventPortSelectorProvider`.
