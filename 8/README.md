@@ -17,6 +17,20 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * [New and Enhanced APIs That Take Advantage of Lambda Expressions and Streams (`java.util.stream package`)](https://docs.oracle.com/javase/8/docs/technotes/guides/language/lambda_api_jdk8.html).
 * Performance Improvement for HashMaps with Key Collisions.
 
+### [Concurrency](https://docs.oracle.com/javase/8/docs/technotes/guides/concurrency/changes8.html)
+
+* Classes and interfaces have been added to the `java.util.concurrent` package.
+  - Interface [`CompletableFuture.AsynchronousCompletionTask`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.AsynchronousCompletionTask.html): A marker interface identifying asynchronous tasks produced by async methods.
+  - Interface [`CompletionStage<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html): A stage of a possibly asynchronous computation, that performs an action or computes a value when another `CompletionStage` completes.
+  - Class [`CompletableFuture<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html): A Future that may be explicitly completed (setting its value and status), and may be used as a `CompletionStage`, supporting dependent functions and actions that trigger upon its completion.
+  - Class [`ConcurrentHashMap.KeySetView<K,V>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.KeySetView.html): A view of a `ConcurrentHashMap` as a `Set` of keys, in which additions may optionally be enabled by mapping to a common value.
+  - Class [`CountedCompleter<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CountedCompleter.html): A `ForkJoinTask` with a completion action performed when triggered and there are no remaining pending actions.
+  - Class [`CompletionException`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionException.html): Exception thrown when an error or other exception is encountered in the course of completing a result or task.
+* Methods have been added to the [`java.util.concurrent.ConcurrentHashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html) class to support aggregate operations based on the newly added streams facility and lambda expressions.
+* Classes have been added to the [`java.util.concurrent.atomic`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/package-summary.html) package to support scalable updatable variables.
+* Methods have been added to the [`java.util.concurrent.ForkJoinPool`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ForkJoinPool.html) class to support a common pool.
+* The [`java.util.concurrent.locks.StampedLock`](https://docs.oracle.com/javase/8/docs/api/index.html?java/util/concurrent/package-summary.html) class has been added to provide a capability-based lock with three modes for controlling read/write access.
+
 ### [Date-Time Package](https://docs.oracle.com/javase/8/docs/technotes/guides/datetime/index.html)
 
 * [`java.time`](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html) - Classes for date, time, date and time combined, time zones, instants, duration, and clocks.
