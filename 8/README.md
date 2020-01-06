@@ -17,8 +17,6 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * [New and Enhanced APIs That Take Advantage of Lambda Expressions and Streams (`java.util.stream package`)](https://docs.oracle.com/javase/8/docs/technotes/guides/language/lambda_api_jdk8.html).
 * Performance Improvement for HashMaps with Key Collisions.
 
-### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
-
 ### [Security](https://docs.oracle.com/javase/8/docs/technotes/guides/security/enhancements-8.html)
 
 * Client-side TLS 1.2 enabled by default.
@@ -41,4 +39,26 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * Support for stronger strength ephemeral DH keys in the SunJSSE provider.
 * Support for server-side cipher suites preference customization in JSSE.
 
+### [Tools](https://docs.oracle.com/javase/8/docs/technotes/tools/enhancements-8.html)
+
+* The `jjs` command is provided to invoke the Nashorn engine.
+* The `java` command launches JavaFX applications.
+* The `java` man page has been reworked.
+* The `jdeps` command-line tool is provided for analyzing class files.
+* Java Management Extensions (JMX) provide remote access to diagnostic commands.
+* The `jarsigner` tool has an option for requesting a signed time stamp from a Time Stamping Authority (TSA).
+
+### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
+
 ### [JavaFX](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
+
+* The new [Modena](http://fxexperience.com/2013/03/modena-theme-update/) theme has been implemented in this release.
+* The new `SwingNode` class enables developers to [embed Swing content into JavaFX applications](https://docs.oracle.com/javase/8/javafx/interoperability-tutorial/embed-swing.htm).
+* The new UI Controls include the `DatePicker` and the `TreeTableView` controls.
+* The [`javafx.print`](https://docs.oracle.com/javase/8/javafx/api/javafx/print/package-summary.html) package provides the public classes for the JavaFX Printing API.
+* The [3D Graphics](https://docs.oracle.com/javase/8/javafx/graphics-tutorial/javafx-3d-graphics.htm) features now include 3D shapes, camera, lights, subscene, material, picking, and antialiasing. The new `Shape3D` (`Box`, `Cylinder`, `MeshView`, and `Sphere` subclasses), `SubScene`, `Material`, `PickResult`, `LightBase` (`AmbientLight` and `PointLight` subclasses), and `SceneAntialiasing` API classes have been added to the JavaFX 3D Graphics library. The `Camera` API class has also been updated in this release.
+* The `WebView` class provides new features and improvements. Review [Supported Features of HTML5](https://docs.oracle.com/javase/8/javafx/embedded-browser-tutorial/index.html) for more information about additional HTML5 features including Web Sockets, Web Workers, and Web Fonts.
+* Support for Hi-DPI displays has been added in this release.
+* The CSS Styleable classes (`javafx.css javadoc`) became public API.
+* The new `ScheduledService` class allows to automatically restart the service.
+* JavaFX is now available for ARM platforms. JDK for ARM includes the base, graphics and controls components of JavaFX.
