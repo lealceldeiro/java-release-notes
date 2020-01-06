@@ -55,7 +55,7 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 
 * JDK 8 includes Java DB 10.10.
 
-### Java [XML](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/enhancements.html) - [JAXP](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxp/enhancements-8.html)
+### [Java XML](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/enhancements.html) - [JAXP](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxp/enhancements-8.html)
 
 ### [Networking](https://docs.oracle.com/javase/8/docs/technotes/guides/net/enhancements-8.0.html)
 
@@ -67,6 +67,8 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * New `SelectorProvider` implementation for Solaris based on the Solaris event port mechanism. To use, run with the system property `java.nio.channels.spi.Selector` set to the value `sun.nio.ch.EventPortSelectorProvider`.
 * Decrease in the size of the `<JDK_HOME>/jre/lib/charsets.jar` file
 * Performance improvement for the `java.lang.String(byte[], *)` constructor and the `java.lang.String.getBytes()` method.
+
+### [HotSpot](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/)
 
 ### [Security](https://docs.oracle.com/javase/8/docs/technotes/guides/security/enhancements-8.html)
 
