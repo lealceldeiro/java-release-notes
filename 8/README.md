@@ -66,6 +66,10 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
   - The `javadoc` tool supports the new Javadoc Access API that enables you to invoke the Javadoc tool directly from a Java application, without executing a new process. See the `javadoc` what's new page for more information.
   - The `javadoc` tool now has support for checking the content of javadoc comments for issues that could lead to various problems, such as invalid HTML or accessibility issues, in the files that are generated when `javadoc` is run. The feature is enabled by default, and can also be controlled by the new `-Xdoclint` option. For more details, see the output from running `javadoc -X`. This feature is also available in the `javac` tool, although it is not enabled by default there.
 
+### [Scripting](http://docs.oracle.com/javase/8/docs/technotes/guides/scripting/enhancements.html#jdk8)
+
+* The *Rhino* javascript engine has been replaced with the [Nashorn](http://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/) Javascript Engine.
+
 ### [Internationalization](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/enhancements.8.html)
 
 * Unicode Enhancements, including support for Unicode 6.2.0
@@ -79,6 +83,11 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * The Permissions attribute is required in the JAR file manifest of the main JAR file at all security levels.
 
 ### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
+
+### [Pack200](http://docs.oracle.com/javase/8/docs/technotes/guides/pack200/enhancements.html)
+
+* Pack200 Support for Constant Pool Entries and New Bytecodes Introduced by JSR 292
+* JDK8 support for class files changes specified by JSR-292, JSR-308 and JSR-335
 
 ### [JavaFX](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
 
