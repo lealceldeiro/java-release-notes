@@ -57,6 +57,13 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
   - The `javadoc` tool supports the new Javadoc Access API that enables you to invoke the Javadoc tool directly from a Java application, without executing a new process. See the `javadoc` what's new page for more information.
   - The `javadoc` tool now has support for checking the content of javadoc comments for issues that could lead to various problems, such as invalid HTML or accessibility issues, in the files that are generated when `javadoc` is run. The feature is enabled by default, and can also be controlled by the new `-Xdoclint` option. For more details, see the output from running `javadoc -X`. This feature is also available in the `javac` tool, although it is not enabled by default there.
 
+## [Internationalization](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/enhancements.8.html)
+
+* Unicode Enhancements, including support for Unicode 6.2.0
+* Adoption of Unicode CLDR Data and the java.locale.providers System Property
+* New Calendar and Locale APIs
+* Ability to Install a Custom Resource Bundle as an Extension
+
 ### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
 
 ### [JavaFX](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
