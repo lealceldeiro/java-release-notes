@@ -17,6 +17,15 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * [New and Enhanced APIs That Take Advantage of Lambda Expressions and Streams (`java.util.stream package`)](https://docs.oracle.com/javase/8/docs/technotes/guides/language/lambda_api_jdk8.html).
 * Performance Improvement for HashMaps with Key Collisions.
 
+### [Date-Time Package](https://docs.oracle.com/javase/8/docs/technotes/guides/datetime/index.html)
+
+* [`java.time`](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html) - Classes for date, time, date and time combined, time zones, instants, duration, and clocks.
+* [`java.time.chrono`](https://docs.oracle.com/javase/8/docs/api/java/time/chrono/package-summary.html) - API for representing calendar systems other than ISO-8601. Several predefined chronologies are provided and you can also define your own chronology.
+* [`java.time.format`](https://docs.oracle.com/javase/8/docs/api/java/time/format/package-summary.html) - Classes for formatting and parsing dates and time.
+* [`java.time.temporal`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/package-summary.html) - Extended API, primarily for framework and library writers, allowing interoperations between the date and time classes, querying, and adjustment. Fields and units are defined in this package.
+* [`java.time.zone`](https://docs.oracle.com/javase/8/docs/api/java/time/zone/package-summary.html) - Classes that support time zones, offsets from time zones, and time zone rules.
+* JSR 310: Date and Time API
+
 ### [Security](https://docs.oracle.com/javase/8/docs/technotes/guides/security/enhancements-8.html)
 
 * Client-side TLS 1.2 enabled by default.
