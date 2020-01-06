@@ -159,3 +159,5 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * The CSS Styleable classes (`javafx.css javadoc`) became public API.
 * The new `ScheduledService` class allows to automatically restart the service.
 * JavaFX is now available for ARM platforms. JDK for ARM includes the base, graphics and controls components of JavaFX.
+
+### [Java Mission Control 5.3](https://www.oracle.com/technetwork/java/javase/jmc53-release-notes-2157171.html)
