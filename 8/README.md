@@ -70,6 +70,20 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 
 ### [HotSpot](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/)
 
+* Hardware intrinsics were added to use Advanced Encryption Standard (AES). The `UseAES` and `UseAESIntrinsics` flags are available to enable the hardware-based AES intrinsics for Intel hardware. The hardware must be 2010 or newer Westmere hardware.
+
+  - Note: AES intrinsics are only supported by the Server VM.
+  - For example, to enable hardware AES, use the following flags:
+  ```
+  -XX:+UseAES -XX:+UseAESIntrinsics
+  ```
+  - To disable hardware AES use the following flags:
+  ```
+  -XX:-UseAES -XX:-UseAESIntrinsics
+  ```
+* Removal of PermGen.
+* Default Methods in the Java Programming Language are supported by the byte code instructions for method invocation.
+
 ### [Security](https://docs.oracle.com/javase/8/docs/technotes/guides/security/enhancements-8.html)
 
 * Client-side TLS 1.2 enabled by default.
