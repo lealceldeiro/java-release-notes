@@ -26,6 +26,12 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * [`java.time.zone`](https://docs.oracle.com/javase/8/docs/api/java/time/zone/package-summary.html) - Classes that support time zones, offsets from time zones, and time zone rules.
 * JSR 310: Date and Time API
 
+### [`java.lang and java.util Packages`](https://docs.oracle.com/javase/8/docs/technotes/guides/lang/enhancements.html#jdk8)
+
+* Parallel Array Sorting
+* Standard Encoding and Decoding Base64
+* Unsigned Arithmetic Support
+
 ### [IO and NIO](https://docs.oracle.com/javase/8/docs/technotes/guides/io/enhancements.html#jdk8)
 
 * New `SelectorProvider` implementation for Solaris based on the Solaris event port mechanism. To use, run with the system property `java.nio.channels.spi.Selector` set to the value `sun.nio.ch.EventPortSelectorProvider`.
