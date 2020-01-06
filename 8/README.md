@@ -47,6 +47,11 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 * The `jdeps` command-line tool is provided for analyzing class files.
 * Java Management Extensions (JMX) provide remote access to diagnostic commands.
 * The `jarsigner` tool has an option for requesting a signed time stamp from a Time Stamping Authority (TSA).
+* [Javac tool](https://docs.oracle.com/javase/8/docs/technotes/guides/javac/index.html)
+  - The `-parameters` option of the `javac` command can be used to store formal parameter names and enable the Reflection API to retrieve formal parameter names.
+  - The type rules for equality operators in the Java Language Specification (JLS) Section 15.21 are now correctly enforced by the `javac` command.
+  - The `javac` tool now has support for checking the content of `javadoc` comments for issues that could lead to various problems, such as invalid HTML or accessibility issues, in the files that are generated when `javadoc` is run. The feature is enabled by the new `-Xdoclint` option. For more details, see the output from running `javac -X`. This feature is also available in the `javadoc` tool, and is enabled there by default.
+  - The `javac` tool now provides the ability to generate native headers, as needed. This removes the need to run the `javah` tool as a separate step in the build pipeline. The feature is enabled in `javac` by using the new `-h` option, which is used to specify a directory in which the header files should be written. Header files will be generated for any class which has either native methods, or constant fields annotated with a new annotation of type `java.lang.annotation.Native`.
 
 ### [Compact Profiles](https://docs.oracle.com/javase/8/docs/technotes/guides/compactprofiles/)
 
