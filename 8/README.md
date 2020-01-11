@@ -87,7 +87,7 @@ Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new
 ### [Security](https://docs.oracle.com/javase/8/docs/technotes/guides/security/enhancements-8.html)
 
 * Client-side TLS 1.2 enabled by default.
-* New variant of AccessController.doPrivileged that enables code to assert a subset of its privileges, without preventing the full traversal of the stack to check for other permissions.
+* New variant of `AccessController.doPrivileged` that enables code to assert a subset of its privileges, without preventing the full traversal of the stack to check for other permissions.
 * Stronger algorithms for password-based encryption.
 * SSL/TLS Server Name Indication (SNI) Extension support in JSSE Server.
 * Support for AEAD algorithms.
