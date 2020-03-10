@@ -1,6 +1,4 @@
-# Java 8 Release - Notes
-
-Oracle Release Notes: https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html
+# [Java 8](https://docs.oracle.com/javase/8/) [Release Notes](https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html)
 
 ### [Java Programming Language](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html#javase8)
 
