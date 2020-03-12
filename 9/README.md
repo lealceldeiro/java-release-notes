@@ -5,5 +5,9 @@
 
 ### Key Changes in JDK 9
 
- * Java Platform Module System: Introduces a new kind of Java programing component, the module, which is a named, self-describing collection of code and data. (More info at [Java Platform Module System (JSR 376)](http://openjdk.java.net/projects/jigsaw/spec/), [JEP 261: Module System](http://openjdk.java.net/jeps/261), [JEP 200: The Modular JDK](http://openjdk.java.net/jeps/200), [JEP 220: Modular Run-Time Images](http://openjdk.java.net/jeps/220) and [JEP 260: Encapsulate Most Internal APIs](http://openjdk.java.net/jeps/260)).
+ * Java Platform Module System: Introduces a new kind of Java programing component, the module, which is a named, self-describing collection of code and data. More info at
+   - [Java Platform Module System (JSR 376)](http://openjdk.java.net/projects/jigsaw/spec/)
+   - [JEP 261: Module System](http://openjdk.java.net/jeps/261)
+   - [JEP 200: The Modular JDK](http://openjdk.java.net/jeps/200)
+   - [JEP 220: Modular Run-Time Images](http://openjdk.java.net/jeps/220) and [JEP 260: Encapsulate Most Internal APIs](http://openjdk.java.net/jeps/260).
  * [JEP 223: New Version-String Scheme](http://openjdk.java.net/jeps/223)
