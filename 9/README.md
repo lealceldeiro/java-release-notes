@@ -76,3 +76,12 @@
 * [JEP 289: Deprecate the Applet API](http://openjdk.java.net/jeps/289): Deprecates the Applet API, which is becoming less useful as web browser vendors remove support for Java browser plug-ins. While still available in JDK 9, the Applet class will be considered for removal in a future release. Consider rewriting applets as Java Web Start or self-contained applications.
 
 ### What’s New for the Java Language in JDK 9
+
+* [JEP 213: Milling Project Coin](http://openjdk.java.net/jeps/213) (_more at [Java Language Changes for Java SE 9](https://docs.oracle.com/javase/9/language/toc.htm#JSLAN-GUID-16A5183A-DC0D-4A96-B9D8-AAC9671222DD)_)
+  - Allow `@SafeVargs` on private instance methods.
+  - Allow effectively final variables to be used as resources in the `try-with-resources` statement.
+  - Allow the diamond with anonymous classes if the argument type of the inferred type is denotable.
+  - Complete the removal, begun in Java SE 8, of the underscore from the set of legal identifier names.
+  - Add support for private interface methods.
+
+### What’s New for Javadoc in JDK 9
