@@ -99,3 +99,22 @@
 
 ### What’s New for JVM Tuning in JDK 9
 
+* Improve G1 Usability, Determinism, and Performance
+* [JEP 158: Unified JVM Logging](http://openjdk.java.net/jeps/158) (_more info at the `-Xloggc java` option_)
+* [JEP 214: Remove GC Combinations Deprecated in JDK 8](http://openjdk.java.net/jeps/214)
+  - This means that the following GC combinations no longer exist:
+    + DefNew + CMS
+    + ParNew + SerialOld
+    + Incremental CMS
+  - The "foreground" mode for Concurrent Mark Sweep (CMS) has also been removed. The following command-line flags have been removed:
+    + `-Xincgc`
+    + `-XX:+CMSIncrementalMode`
+    + `-XX:+UseCMSCompactAtFullCollection`
+    + `-XX:+CMSFullGCsBeforeCompaction`
+    + `-XX:+UseCMSCollectionPassing`
+  - The command line flag `-XX:+UseParNewGC` no longer has an effect. `ParNew` can only be used with `CMS` and `CMS` requires `ParNew`. Thus, the `-XX:+UseParNewGC` flag has been deprecated and will likely be removed in a future release.
+* [JEP 248: Make G1 the Default Garbage Collector](http://openjdk.java.net/jeps/248)
+* [JEP 271: Unified GC Logging](http://openjdk.java.net/jeps/271)
+* [JEP 291: Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector](http://openjdk.java.net/jeps/291)
+
+### What’s New for Core Libraries in JDK 9
