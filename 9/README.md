@@ -92,3 +92,10 @@
 * [JEP 261: Module System](http://openjdk.java.net/jeps/261)
 
 ### What’s New for the JVM in JDK 9
+
+* [JEP 165: Compiler Control](http://openjdk.java.net/jeps/165): Provides a way to control JVM compilation through compiler directive options. The level of control is runtime-manageable and method-specific. Compiler Control supersedes, and is backward compatible, with CompileCommand.
+* [JEP 197: Segmented Code Cache](http://openjdk.java.net/jeps/197): Divides the code cache into distinct segments, each of which contains compiled code of a particular type, to improve performance and enable future extensions.
+* [JEP 276: Dynamic Linking of Language-Defined Object Models](http://openjdk.java.net/jeps/276)
+
+### What’s New for JVM Tuning in JDK 9
+
