@@ -85,3 +85,10 @@
   - Add support for private interface methods.
 
 ### What’s New for Javadoc in JDK 9
+
+* [JEP 221: Simplified Doclet API](http://openjdk.java.net/jeps/221)
+* [JEP 224: HTML5 Javadoc](http://openjdk.java.net/jeps/224)
+* [JEP 225: Javadoc Search](http://openjdk.java.net/jeps/225)
+* [JEP 261: Module System](http://openjdk.java.net/jeps/261)
+
+### What’s New for the JVM in JDK 9
