@@ -61,5 +61,18 @@
      + SUN provider: SHA3-224, SHA3-256, SHA3-384, and SHA3-512
      + OracleUcrypto provider: SHA-3 digests supported by Solaris 12.0
  
- ### What’s New for Deployment in JDK 9
+### What’s New for Deployment in JDK 9
  
+* [Deprecate the Java Plug-in](https://blogs.oracle.com/java-platform-group/further-updates-to-moving-to-a-plugin-free-web)
+  - Deprecates the Java Plug-in and associated applet technologies in Oracle's JDK 9 builds. While still available in JDK 9, these technologies will be considered for removal from the Oracle JDK and JRE in a future release.
+  - Applets and JavaFX applications embedded in a web page require the Java Plug-in to run. It should be considered to rewrite these types of applications as Java Web Start or self-contained applications.
+* Enhanced Java Control Panel
+  - Improves the grouping and presentation of options within the Java Control Panel. Information is easier to locate, a search field is available, and modal dialog boxes are no longer used.
+  - The location of some options has changed from previous versions of the Java Control Panel.
+* [JEP 275: Modular Java Application Packaging](http://openjdk.java.net/jeps/275)
+  - Integrates features from Project Jigsaw into the Java Packager, including module awareness and custom runtime creation.
+  - Leverages the [`jlink`](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool to create smaller packages.
+  - Creates applications that use the JDK 9 runtime only. Cannot be used to package applications with an earlier release of the JRE.
+* [JEP 289: Deprecate the Applet API](http://openjdk.java.net/jeps/289): Deprecates the Applet API, which is becoming less useful as web browser vendors remove support for Java browser plug-ins. While still available in JDK 9, the Applet class will be considered for removal in a future release. Consider rewriting applets as Java Web Start or self-contained applications.
+
+### What’s New for the Java Language in JDK 9
