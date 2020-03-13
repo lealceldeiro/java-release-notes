@@ -118,3 +118,19 @@
 * [JEP 291: Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector](http://openjdk.java.net/jeps/291)
 
 ### What’s New for Core Libraries in JDK 9
+
+* [JEP 102: Process API Updates](http://openjdk.java.net/jeps/102)
+* [JEP 193: Variable Handles](http://openjdk.java.net/jeps/193)
+* [JEP 254: Compact Strings](http://openjdk.java.net/jeps/254)
+* [JEP 264: Platform Logging API and Service](http://openjdk.java.net/jeps/264)
+* [JEP 266: More Concurrency Updates](http://openjdk.java.net/jeps/266)
+* [JEP 268: XML Catalogs](http://openjdk.java.net/jeps/268)
+* [JEP 269: Convenience Factory Methods for Collections](http://openjdk.java.net/jeps/269): Makes it easier to create instances of collections and maps with small numbers of elements. New static factory methods on the List, Set, and Map interfaces make it simpler to create immutable instances of those collections. i.e.: `Set<String> alphabet = Set.of("a", "b", "c");`
+* [JEP 274: Enhanced Method Handles](http://openjdk.java.net/jeps/274)
+* [JEP 277: Enhanced Deprecation](http://openjdk.java.net/jeps/277): Revamps the @Deprecated annotation to provide better information about the status and intended disposition of an API in the specification. Two new elements have been added:
+  - `@Deprecated(forRemoval=true)` indicates that the API will be removed in a future release of the Java SE platform.
+  - `@Deprecated(since="version")` contains the Java SE version string that indicates when the API element was deprecated, for those deprecated in Java SE 9 and beyond.
+* [JEP 285: Spin-Wait Hints](http://openjdk.java.net/jeps/285)
+* [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290)
+* [JEP 259: Stack-Walking API](http://openjdk.java.net/jeps/259)
+* [JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP](https://bugs.openjdk.java.net/browse/JDK-8044086)
