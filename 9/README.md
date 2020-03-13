@@ -11,6 +11,22 @@
    - [JEP 200: The Modular JDK](http://openjdk.java.net/jeps/200)
    - [JEP 220: Modular Run-Time Images](http://openjdk.java.net/jeps/220) and [JEP 260: Encapsulate Most Internal APIs](http://openjdk.java.net/jeps/260).
  * [JEP 223: New Version-String Scheme](http://openjdk.java.net/jeps/223): Provides a simplified version-string format that helps to clearly distinguish major, minor, security, and patch update releases. The new version-string format is `$MAJOR.$MINOR.$SECURITY.$PATCH`.
+
+### What’s New for the Java Language in JDK 9
+
+* [JEP 213: Milling Project Coin](http://openjdk.java.net/jeps/213) (_more at [Java Language Changes for Java SE 9](https://docs.oracle.com/javase/9/language/toc.htm#JSLAN-GUID-16A5183A-DC0D-4A96-B9D8-AAC9671222DD)_)
+  - Allow `@SafeVargs` on private instance methods.
+  - Allow effectively final variables to be used as resources in the `try-with-resources` statement.
+  - Allow the diamond with anonymous classes if the argument type of the inferred type is denotable.
+  - Complete the removal, begun in Java SE 8, of the underscore from the set of legal identifier names.
+  - Add support for private interface methods.
+
+### What’s New for Javadoc in JDK 9
+
+* [JEP 221: Simplified Doclet API](http://openjdk.java.net/jeps/221)
+* [JEP 224: HTML5 Javadoc](http://openjdk.java.net/jeps/224)
+* [JEP 225: Javadoc Search](http://openjdk.java.net/jeps/225)
+* [JEP 261: Module System](http://openjdk.java.net/jeps/261)
  
 ### What’s New for the JDK 9 Installer
 
@@ -74,22 +90,6 @@
   - Leverages the [`jlink`](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool to create smaller packages.
   - Creates applications that use the JDK 9 runtime only. Cannot be used to package applications with an earlier release of the JRE.
 * [JEP 289: Deprecate the Applet API](http://openjdk.java.net/jeps/289): Deprecates the Applet API, which is becoming less useful as web browser vendors remove support for Java browser plug-ins. While still available in JDK 9, the Applet class will be considered for removal in a future release. Consider rewriting applets as Java Web Start or self-contained applications.
-
-### What’s New for the Java Language in JDK 9
-
-* [JEP 213: Milling Project Coin](http://openjdk.java.net/jeps/213) (_more at [Java Language Changes for Java SE 9](https://docs.oracle.com/javase/9/language/toc.htm#JSLAN-GUID-16A5183A-DC0D-4A96-B9D8-AAC9671222DD)_)
-  - Allow `@SafeVargs` on private instance methods.
-  - Allow effectively final variables to be used as resources in the `try-with-resources` statement.
-  - Allow the diamond with anonymous classes if the argument type of the inferred type is denotable.
-  - Complete the removal, begun in Java SE 8, of the underscore from the set of legal identifier names.
-  - Add support for private interface methods.
-
-### What’s New for Javadoc in JDK 9
-
-* [JEP 221: Simplified Doclet API](http://openjdk.java.net/jeps/221)
-* [JEP 224: HTML5 Javadoc](http://openjdk.java.net/jeps/224)
-* [JEP 225: Javadoc Search](http://openjdk.java.net/jeps/225)
-* [JEP 261: Module System](http://openjdk.java.net/jeps/261)
 
 ### What’s New for the JVM in JDK 9
 
