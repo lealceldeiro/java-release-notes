@@ -27,6 +27,12 @@
 * [JEP 224: HTML5 Javadoc](http://openjdk.java.net/jeps/224)
 * [JEP 225: Javadoc Search](http://openjdk.java.net/jeps/225)
 * [JEP 261: Module System](http://openjdk.java.net/jeps/261)
+
+### What’s New for Internationalization in JDK 9
+
+* [JEP 267: Unicode 8.0](http://openjdk.java.net/jeps/267)
+* [JEP 252: CLDR Locale Data Enabled by Default](http://openjdk.java.net/jeps/252)
+* [JEP 226: UTF-8 Properties Files](http://openjdk.java.net/jeps/226)
  
 ### What’s New for the JDK 9 Installer
 
@@ -134,3 +140,18 @@
 * [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290)
 * [JEP 259: Stack-Walking API](http://openjdk.java.net/jeps/259)
 * [JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP](https://bugs.openjdk.java.net/browse/JDK-8044086)
+
+### What's New for Nashorn in JDK 9
+
+* [JEP 236: Parser API for Nashorn](http://openjdk.java.net/jeps/236)
+* [JEP 292: Implement Selected ECMAScript 6 Features in Nashorn](http://openjdk.java.net/jeps/292)
+
+### What’s New for Client Technologies in JDK 9
+
+* [JEP 251: Multi-Resolution Images](http://openjdk.java.net/jeps/251)
+* [JEP 253: Prepare JavaFX UI Controls and CSS APIs for Modularization](https://openjdk.java.net/jeps/253)
+* [JEP 256: BeanInfo Annotations](http://openjdk.java.net/jeps/256)
+* [JEP 262: TIFF Image I/O](http://openjdk.java.net/jeps/262)
+* [JEP 263: HiDPI Graphics on Windows and Linux](http://openjdk.java.net/jeps/263)
+* [JEP 272: Platform-Specific Desktop Features](http://openjdk.java.net/jeps/272)
+* [JEP 283: Enable GTK 3 on Linux](http://openjdk.java.net/jeps/283)
