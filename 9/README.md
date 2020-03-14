@@ -155,3 +155,15 @@
 * [JEP 263: HiDPI Graphics on Windows and Linux](http://openjdk.java.net/jeps/263)
 * [JEP 272: Platform-Specific Desktop Features](http://openjdk.java.net/jeps/272)
 * [JEP 283: Enable GTK 3 on Linux](http://openjdk.java.net/jeps/283)
+
+## [Important Changes and Information](https://www.oracle.com/technetwork/java/javase/9-relnote-issues-3704069.html)
+
+## [Enhancements and Notes](https://www.oracle.com/technetwork/java/javase/9-new-features-3745613.html)
+
+## [Removed APIs, Features, and Options](https://www.oracle.com/technetwork/java/javase/9-removed-features-3745614.html)
+
+## [Deprecated APIs, Features, and Options](https://www.oracle.com/technetwork/java/javase/9-deprecated-features-3745636.html)
+
+## [Other Notes](https://www.oracle.com/technetwork/java/javase/9-notes-3745703.html)
+
+## [Java Mission Control 6.0 Release Notes](https://www.oracle.com/technetwork/java/javase/jmc6-release-notes-3689600.html)
