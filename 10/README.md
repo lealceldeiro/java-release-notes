@@ -44,7 +44,9 @@ Provides a default set of root Certification Authority (CA) certificates in the 
 
 The `cacerts` keystore of the OpenJDK 9 binary for Linux x64 has been populated by [JEP 319: Root Certificates](http://openjdk.java.net/jeps/319) [<sup><sub>**https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8191486**</sub></sup>] with a set of root certificates issued by the CAs of Oracle's Java SE Root CA Program. This addresses the problem of the empty cacerts keystore in the OpenJDK 9 binary for Linux x64. The empty cacerts keystore had prevented TLS connections from being established because Trusted Root Certificate Authorities were not installed. As a workaround for OpenJDK 9 binaries, users had to set the javax.net.ssl.trustStore System Property to use a different keystore.
 
-[1] https://bugs.java.com/view_bug.do?bug_id=JDK-8191486
+_security-libs/javax.net.ssl_
+
+**TLS Session Hash and Extended Master Secret Extension Support**
 
 ## [Removed Features and Options](https://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html#Removed)
 
