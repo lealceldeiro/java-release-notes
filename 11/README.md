@@ -287,3 +287,17 @@ Deprecate the `pack200` and `unpack200` tools, and the Pack200 API in `java.util
 The pack200 API and the tools associated with it, pack200 and unpack200, have been deprecated and will be removed in a future release.
 
 Those tools are still included in JDK 11, but will no longer be updated to support the latest class file format. Class files with unknown attributes will be passed-through without compression.
+
+## Other
+
+_core-libs/java.lang_
+
+**Make Some System Properties Effectively readonly**
+
+The values of `java.home`, `user.home`, `user.dir`, and `user.name` properties are cached at startup. Changes made using `System::setProperty` after startup will not change the behavior of APIs in the java.base module.
+
+_core-libs/java.lang.module_
+
+**Change to Policy for the Default Set of Modules Resolved When Compiling or Running Code on the Class Path**
+
+The default set of root modules when compiling code or running code on the class path has changed in JDK 11 to be all observable system modules that export an API. The only observable change is that the `java.se` module is no longer resolved by default.
