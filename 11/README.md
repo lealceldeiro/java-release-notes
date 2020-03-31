@@ -241,3 +241,49 @@ _other-libs_
 **JEP 320 Remove the Java EE and CORBA Modules**
 
 Remove the Java EE and CORBA modules from the Java SE Platform and the JDK. These modules were deprecated in Java SE 9 with the declared intent to remove them in a future release ([JEP 320](http://openjdk.java.net/jeps/320)).
+
+## Deprecated Features and Options
+
+_core-libs/java.util.concurrent_
+
+**`ThreadPoolExecutor` Should Not Specify a Dependency on Finalization**
+
+Previous versions of `ThreadPoolExecutor` had a finalize method that shut down the thread pool, but in this version the `finalize` method does nothing. This should have no visible effect unless a subclass explicitly invokes the finalize method and relies on the executor being shutdown.
+
+_docs_
+
+**JEP 335 Deprecate the Nashorn JavaScript Engine**
+
+Deprecate the Nashorn JavaScript script engine and APIs, and the jjs tool, with the intent to remove them in a future release ([JEP 335](http://openjdk.java.net/jeps/335)).
+
+The Nashorn JavaScript Engine implementation, the APIs and the `jjs` shell tool have been deprecated and might be removed in a future release. Code that uses classes and interfaces from `jdk.nashorn.api.scripting` and `jdk.nashorn.api.tree` packages will get a deprecation warning from `javac`.
+
+_hotspot/compiler_
+
+**Deprecate -XX+AggressiveOpts**
+
+The VM option `-XX:+AggressiveOpts` is deprecated in JDK 11 and will be removed in a future release. The option was originally supposed to enable experimental optimizations of the C2 compiler to improve performance of specific benchmarks. Most features have been removed or integrated over time leaving the behavior of the option ill-defined and error-prone. The only effect that the flag currently has is setting `AutoBoxCacheMax` to 20000 and `BiasedLockingStartupDelay` to 500. The same configuration can be achieved by setting their corresponding flags from the command line. Therefore, `-XX:+AggressiveOpts` will no longer be available in a future release.
+
+_hotspot/runtime_
+
+**Obsolete Support for Commercial Features**
+
+The `-XX:+UnlockCommercialFeatures` and `-XX:+LogCommercialFeatures` command line arguments have been obsoleted, and will generate a warning message if used. The command line arguments used to control the use of and logging for commercial/licensed features in the VM. Since there are no such features anymore the command line arguments are no longer useful.
+
+Similarly, the `VM.unlock_commercial_features` and `VM.check_commercial_features` `jcmd` commands will also generate a warning message but have no additional effect.
+
+_security-libs/org.ietf.jgss_
+
+**Deprecate Stream-Based GSSContext Methods**
+
+The stream-based methods in `GSSContext` have been deprecated in this release since GSS-API works on opaque tokens and has not defined a wire protocol. This includes the overloaded forms of the `initSecContext`, `acceptSecContext`, `wrap`, `unwrap`, `getMIC`, and `verifyMIC` methods that have an `InputStream` argument. These methods have already been removed in RFC 8353.
+
+_tools_
+
+**JEP 336 Deprecate the Pack200 Tools and API**
+
+Deprecate the `pack200` and `unpack200` tools, and the Pack200 API in `java.util.jar` ([JEP 336](http://openjdk.java.net/jeps/336)).
+
+The pack200 API and the tools associated with it, pack200 and unpack200, have been deprecated and will be removed in a future release.
+
+Those tools are still included in JDK 11, but will no longer be updated to support the latest class file format. Class files with unknown attributes will be passed-through without compression.
