@@ -151,3 +151,93 @@ _tools/launcher_
 **JEP 330 Launch Single-File Source-Code Programs**
 
 Enhance the java launcher to run a program supplied as a single file of Java source code, including usage from within a script by means of "shebang" files and related techniques.
+
+## Removed Features and Options
+
+_client-libs_
+
+**Removal of com.sun.awt.AWTUtilities Class**
+
+The com.sun.awt.AWTUtilities class was deprecated with forRemoval=true in JDK 10 (JDK-8187253). This class was unused in the JDK and has been removed in this release.
+
+_client-libs/2d_
+
+**Removal of Lucida Fonts from Oracle JDK**
+
+Oracle JDK no longer ships any fonts and relies entirely on fonts installed on the operating system.
+
+This means that fonts in the Bigelow & Holmes Lucida family (Lucida Sans, Lucida Bright, and Lucida Typewriter) are no longer available to applications from the JDK.
+
+If applications rely on fonts shipped in the JDK, they may need to be updated.
+
+If system adminstrators are running Java server applications that rely on fonts shipped in the JDK rather than on system font packages, then the applications may fail to run until the system font packages are installed.
+
+_client-libs/java.awt_
+
+**Removal of `appletviewer` Launcher**
+
+The `appletviewer` tool was deprecated in JDK 9 (see [JDK-8074165](http://bugs.java.com/view_bug.do?bug_id=JDK-8074165)) and removed in this release.
+
+_client-libs/javax.imageio_
+
+**Oracle JDK's javax.imageio JPEG Plugin No Longer Supports Images with alpha**
+
+_core-libs_
+
+**Removal of sun.misc.Unsafe.defineClass**
+
+The `sun.misc.Unsafe.defineClass` class has been removed. Users should use the public replacement, `java.lang.invoke.MethodHandles.Lookup.defineClass`, added in Java SE 9. More info at https://docs.oracle.com/javase/9/docs/api/java/lang/invoke/MethodHandles.Lookup.html#defineClass-byte:A-
+
+_core-libs/java.lang_
+
+**Removal of Thread.destroy() and Thread.stop(Throwable) Methods**
+
+The methods `Thread.destroy()` and `Thread.stop(Throwable)` have been removed. They have been deprecated for several Java SE releases. The `Thread.destroy()` method has never been implemented, and the `Thread.stop(Throwable)` method has been non-functional since Java SE 8. No code should rely on the behavior of these two methods; however, any code that uses these methods will cause compilation errors. The mitigation is to remove references to these methods from the source code. Note that the no-arg method `Thread.stop()` is unaffected by this change.
+
+_core-libs/java.nio_
+
+**Removal of sun.nio.ch.disableSystemWideOverlappingFileLockCheck Property**
+
+The property `sun.nio.ch.disableSystemWideOverlappingFileLockCheck` has been removed. Consequently, compatibility with the older locking approach has also been removed.
+
+_core-libs/java.util:i18n_
+
+**Removal of sun.locale.formatasdefault Property**
+
+The system property `sun.locale.formatasdefault`, introduced in JDK 7 for backwards compatibility, has been removed.
+
+_core-svc/javax.management_
+
+**Removal of JVM-MANAGEMENT-MIB.mib**
+
+The specification for JVM monitoring and management through SNMP `JVM-MANAGEMENT-MIB.mib` has been removed. Customers can use JMX to monitor and manage a running JVM and to access the standard set of metrics and operations.
+
+_core-svc/tools_
+
+**Removal of SNMP Agent**
+
+The jdk.snmp module has been removed.
+
+_deploy_
+
+**Removal of Java Deployment Technologies**
+
+The Java Plugin and Java WebStart technologies that were deprecated in JDK 9 and marked as candidates for removal in JDK 10, have now been removed. The Java Control Panel, which was used for configuring the deployment technologies, has also been removed along with the shared system JRE (but not the server JRE) and the JRE Auto Update mechanism. More details are available in this white paper.
+
+_infrastructure_
+
+**Removal of JMC from the Oracle JDK**
+
+Java Mission Control (JMC) is no longer included in the JDK bundles. A stand-alone version of JMC, compatible with Oracle JDK 11 and OpenJDK 11, is available as a separate download.
+
+_javafx/other_
+
+**Removal of JavaFX from the Oracle JDK**
+
+The JavaFX modules have been removed from the JDK 11 release. These modules were included in earlier releases of the Oracle JDK, but not in the OpenJDK releases. The JavaFX modules will be available as a separate set of modules outside the JDK. More details are available in this [white paper(http://www.oracle.com/technetwork/java/javase/javaclientroadmapupdate2018mar-4414431.pdf)
+
+_other-libs_
+
+**JEP 320 Remove the Java EE and CORBA Modules**
+
+Remove the Java EE and CORBA modules from the Java SE Platform and the JDK. These modules were deprecated in Java SE 9 with the declared intent to remove them in a future release ([JEP 320](http://openjdk.java.net/jeps/320)).
