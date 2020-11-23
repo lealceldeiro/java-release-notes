@@ -5,6 +5,6 @@
 ### [Java 10](./10)
 ### [Java 11](./11)
 
-## Useful readings:
+## Useful readings
 
 * [Oracle tutorials](https://docs.oracle.com/javase/tutorial/essential/TOC.html)
