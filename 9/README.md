@@ -5,12 +5,26 @@
 
 ### Key Changes in JDK 9
 
- * Java Platform Module System: Introduces a new kind of Java programing component, the module, which is a named, self-describing collection of code and data. More info at
-   - [Java Platform Module System (JSR 376)](http://openjdk.java.net/projects/jigsaw/spec/)
-   - [JEP 261: Module System](http://openjdk.java.net/jeps/261)
-   - [JEP 200: The Modular JDK](http://openjdk.java.net/jeps/200)
-   - [JEP 220: Modular Run-Time Images](http://openjdk.java.net/jeps/220) and [JEP 260: Encapsulate Most Internal APIs](http://openjdk.java.net/jeps/260).
- * [JEP 223: New Version-String Scheme](http://openjdk.java.net/jeps/223): Provides a simplified version-string format that helps to clearly distinguish major, minor, security, and patch update releases. The new version-string format is `$MAJOR.$MINOR.$SECURITY.$PATCH`.
+* Java Platform Module System: Introduces a new kind of Java programing component, the module, which is a named, self-describing collection of code and data. This module system:
+ 
+   - Introduces a new optional phase: link time, see the [`jlink`](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool documentation.
+   - Adds options to the tools `javac`, `jlink`, and `java` where you can specify module paths, which locate definitions of modules.
+   - Introduces the modular JAR file, which is a JAR file with a `module-info.class` file in its root directory.
+   - Introduces the *JMOD* format, which is a packaging format similar to JAR except it can include native code and configuration files; see the [`jmod`](https://docs.oracle.com/javase/9/tools/jmod.htm#JSWOR-GUID-0A0BDFF6-BE34-461B-86EF-AAC9A555E2AE) tool.
+   - The JDK itself has been divided into a set of modules. This change:
+     - Enables you to combine the JDK's modules into a variety of configurations.
+     - Restructures the JDK and JRE runtime images to accommodate modules and improve performance, security, and maintainability.
+     - Defines a new URI scheme for naming modules, classes, and resources stored in a runtime image without revealing the internal structure or format of the image.
+     - Removes the endorsed-standards override mechanism and the extension mechanism.
+     - Removes `rt.jar` and `tools.jar` from the Java runtime image.
+     - Makes most of the JDK's internal APIs inaccessible by default but leaves a few critical, widely used internal APIs accessible until supported replacements exist for all or most of their functionality.
+ 
+   - More info at [Java Platform Module System (JSR 376)](http://openjdk.java.net/projects/jigsaw/spec/)
+     - [JEP 261: Module System](http://openjdk.java.net/jeps/261)
+     - [JEP 200: The Modular JDK](http://openjdk.java.net/jeps/200)
+     - [JEP 220: Modular Run-Time Images](http://openjdk.java.net/jeps/220) and [JEP 260: Encapsulate Most Internal APIs](http://openjdk.java.net/jeps/260).
+ 
+* [JEP 223: New Version-String Scheme](http://openjdk.java.net/jeps/223): Provides a simplified version-string format that helps to clearly distinguish major, minor, security, and patch update releases. The new version-string format is `$MAJOR.$MINOR.$SECURITY.$PATCH`.
 
 ### What’s New for the Java Language in JDK 9
 
