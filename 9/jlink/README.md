@@ -38,4 +38,51 @@ The created custom image contains the following directories:
 
 `jlink`, by default, performs no service binding when creating an image. Instead, service-provider modules have to be included manually by listing them in `--add-modules`. Alternatively, the option `--bind-services` can be used to include all modules that provide a service that’s used by another resolved module.
 
+**Example using `--bind-services`**
+
+```
+$ jlink
+    --module-path ${jdk-9}/jmods
+    --add-modules java.base,jdk.charsets
+    --output jdk-charsets
+$ jdk-charsets/bin/java --list-modules
+
+> java.base
+> jdk.charsets
+```
+
+**Example using `--bind-services`**
+
+```
+$ jlink
+    --module-path ${jdk-9}/jmods
+    --add-modules java.base
+    --bind-services
+    --output jdk-base-services
+$ jdk-base-services/bin/java --list-modules
+
+> java.base
+> java.compiler
+> java.datatransfer
+> java.desktop
+# ... truncated here about three dozen more modules
+```
+
+The option `--suggest-providers ${service}` lists all observable modules that provide an implementation of `${service}`, which must be specified with its fully qualified name.
+
+**Example**
+
+```
+$ jlink
+    --module-path ${jdk-9}/jmods
+    --suggest-providers java.nio.charset.spi.CharsetProvider
+
+> Suggested providers:
+>  jdk.charsets
+>      provides java.nio.charset.spi.CharsetProvider
+>      used by java.base
+```
+
+Taken together, the platform and application modules that the image contains are known as *system modules*. It’s still possible to add other modules when launching the application.
+
 [1]: https://www.amazon.com/dp/1617294284/ref=cm_sw_em_r_mt_dp_U_WXX8Eb6J2XEDV
