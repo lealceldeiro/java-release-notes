@@ -85,4 +85,14 @@ $ jlink
 
 Taken together, the platform and application modules that the image contains are known as *system modules*. It’s still possible to add other modules when launching the application.
 
+To create a launcher, use the `--launcher ${name}=${module}/${main-class}` option:
+
+* `${name}` is the filename you pick for the executable.
+* `${module}` is the name of the module to launch with.
+* `${main-class}` is the name of the module’s main class.
+
+The latter two are what you’d normally put after `java --module`. And as in that case, if the module defines a main class, you can leave out `/${main-class}`.
+
+All `jlink` options can be seen here: https://docs.oracle.com/javase/9/tools/jlink.htm
+
 [1]: https://www.amazon.com/dp/1617294284/ref=cm_sw_em_r_mt_dp_U_WXX8Eb6J2XEDV
