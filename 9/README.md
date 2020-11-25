@@ -7,7 +7,7 @@
 
 * Java Platform Module System: Introduces a new kind of Java programing component, the module, which is a named, self-describing collection of code and data. This module system:
  
-   - Introduces a new optional phase: link time, see the [`jlink`](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool documentation.
+   - Introduces a new optional phase: link time, see the [`jlink`](https://docs.oracle.com/javase/9/tools/jlink.htm#JSWOR-GUID-CECAC52B-CFEE-46CB-8166-F17A8E9280E9) tool documentation and these **[examples](./jlink)**.
    - Adds options to the tools `javac`, `jlink`, and `java` where you can specify module paths, which locate definitions of modules.
    - Introduces the modular JAR file, which is a JAR file with a `module-info.class` file in its root directory.
    - Introduces the *JMOD* format, which is a packaging format similar to JAR except it can include native code and configuration files; see the [`jmod`](https://docs.oracle.com/javase/9/tools/jmod.htm#JSWOR-GUID-0A0BDFF6-BE34-461B-86EF-AAC9A555E2AE) tool.
