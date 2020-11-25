@@ -26,4 +26,16 @@ $ jdk-base/bin/java --list-modules  # Executes java --list-modules from the n
 
 > Note: From Java 10 on, it’s no longer necessary to place platform modules on the module path. If it doesn’t contain any, `jlink` implicitly loads them from the directory `$JAVA_HOME/jmods`.
 
+The created custom image contains the following directories:
+
+* `bin`: binaries like `java`, `javac` and `jlink`
+* `conf`: configuration files like `.properties`, `.policy` and others
+* `include`: C header files
+* `legal`
+* `lib`: all modules fused into a single file, native libraries (i.e.: `.ddd` and `.so` files) and others (`.properties`, `.policy`)
+* `release`
+
+
+`jlink`, by default, performs no service binding when creating an image. Instead, service-provider modules have to be included manually by listing them in `--add-modules`. Alternatively, the option `--bind-services` can be used to include all modules that provide a service that’s used by another resolved module.
+
 [1]: https://www.amazon.com/dp/1617294284/ref=cm_sw_em_r_mt_dp_U_WXX8Eb6J2XEDV
