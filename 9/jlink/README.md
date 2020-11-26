@@ -32,7 +32,7 @@ The created custom image contains the following directories:
 * `conf`: configuration files like `.properties`, `.policy` and others
 * `include`: C header files
 * `legal`
-* `lib`: all modules fused into a single file, native libraries (i.e.: `.ddd` and `.so` files) and others (`.properties`, `.policy`)
+* `lib`: all modules fused into a single file, native libraries (i.e.: `.dll` and `.so` files) and others (`.properties`, `.policy`)
 * `release`
 
 
