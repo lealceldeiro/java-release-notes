@@ -14,10 +14,15 @@
    - The JDK itself has been divided into a set of modules. This change:
      - Enables you to combine the JDK's modules into a variety of configurations.
      - Restructures the JDK and JRE runtime images to accommodate modules and improve performance, security, and maintainability.
-     - Defines a new URI scheme for naming modules, classes, and resources stored in a runtime image without revealing the internal structure or format of the image.
+     - Defines a new URI scheme for naming modules, classes, and resources stored in a runtime image without revealing the internal structure or format of the image: `jrt`. A *jrt* URL is a hierarchical URI, per [RFC 3986](tools.ietf.org/html/rfc3986), with the syntax `jrt:/[$MODULE[/$PATH]]`. More info at [JEP 220: Modular Run-Time Images](https://openjdk.java.net/jeps/220)
      - Removes the endorsed-standards override mechanism and the extension mechanism.
+       + Before Java 9, the extension mechanism let us add classes to the JDK without having to place them on the class path. It loaded them from directories named by the system property `java.ext.dirs`, from `lib/ext` in the JRE, or from a platform-specific system-wide directory. Likewise the endorsed standards override mechanism let us replace certain APIs with custom implementations. It loaded them from the directories named by the system property `java.endorsed.dirs` or the `lib/endorsed` directory in the JRE. Aftet Java 9 removed these features, alternatives are as follows:
+           - The `java` and `javac` option `--patch-module` injects content into modules.
+           - The `java` and `javac` option `--upgrade-module-path` replaces an upgradeable platform module with another one.
+           - The extending artifacts can be placed on the class path.
      - Removes `rt.jar` and `tools.jar` from the Java runtime image.
      - Makes most of the JDK's internal APIs inaccessible by default but leaves a few critical, widely used internal APIs accessible until supported replacements exist for all or most of their functionality.
+        + To determine if some code uses internal JDK APIs, run the command `jdeps -jdkinternals`.
  
    - More info at [Java Platform Module System (JSR 376)](http://openjdk.java.net/projects/jigsaw/spec/)
      - [JEP 261: Module System](http://openjdk.java.net/jeps/261)
