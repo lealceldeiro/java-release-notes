@@ -182,7 +182,17 @@
 ### What's New for Nashorn in JDK 9
 
 * [JEP 236: Parser API for Nashorn](http://openjdk.java.net/jeps/236)
+  - Enables applications, in particular IDEs and server-side frameworks, to parse and analyze ECMAScript code.
+  - Parse ECMAScript code from a string, URL, or file with methods from the [`Parser`](https://docs.oracle.com/javase/9/docs/api/jdk/nashorn/api/tree/Parser.html) class. These methods return an instance of [`CompilationUnitTree`](https://docs.oracle.com/javase/9/docs/api/jdk/nashorn/api/tree/CompilationUnitTree.html), which represents ECMAScript code as an abstract syntax tree.
+  - The package [`jdk.nashorn.api.tree`](https://docs.oracle.com/javase/9/docs/api/jdk/nashorn/api/tree/package-summary.html) contains the Nashorn parser API.
 * [JEP 292: Implement Selected ECMAScript 6 Features in Nashorn](http://openjdk.java.net/jeps/292)
+  - Implements many new features introduced in the [6th edition of ECMA-262](https://www.ecma-international.org/ecma-262/6.0/), also known as ECMAScript 6, or ES6 for short. Implemented features include the following:
+    - Template strings
+    - `let`, `const`, and block scope
+    - Iterators and `for..of` loops
+    - `Map`, `Set`, `WeakMap`, and `WeakSet`
+    - Symbols
+    - Binary and octal literals
 
 ### What’s New for Client Technologies in JDK 9
 
