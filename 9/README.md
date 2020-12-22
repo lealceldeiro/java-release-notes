@@ -133,7 +133,8 @@
 ### What’s New for JVM Tuning in JDK 9
 
 * Improve G1 Usability, Determinism, and Performance
-* [JEP 158: Unified JVM Logging](http://openjdk.java.net/jeps/158) (_more info at the `-Xloggc java` option_)
+  - Enhances the Garbage-First (G1) garbage collector to automatically determine several important memory-reclamation settings. Previously these settings had to be set manually to obtain optimal results. In addition, fixes issues with the usability, determinism, and performance of the G1 garbage collector.
+* [JEP 158: Unified JVM Logging](http://openjdk.java.net/jeps/158) (_more info at the `-Xloggc java` option_) and [Enable Logging with the JVM Unified Logging Framework](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR-GUID-BE93ABDC-999C-4CB5-A88B-1994AAAC74D5)
 * [JEP 214: Remove GC Combinations Deprecated in JDK 8](http://openjdk.java.net/jeps/214)
   - This means that the following GC combinations no longer exist:
     + DefNew + CMS
