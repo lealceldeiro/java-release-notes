@@ -133,9 +133,13 @@
 
 ### What’s New for the JVM in JDK 9
 
-* [JEP 165: Compiler Control](http://openjdk.java.net/jeps/165): Provides a way to control JVM compilation through compiler directive options. The level of control is runtime-manageable and method-specific. Compiler Control supersedes, and is backward compatible, with CompileCommand.
-* [JEP 197: Segmented Code Cache](http://openjdk.java.net/jeps/197): Divides the code cache into distinct segments, each of which contains compiled code of a particular type, to improve performance and enable future extensions.
+* [JEP 165: Compiler Control](http://openjdk.java.net/jeps/165)
+  - Provides a way to control JVM compilation through compiler directive options. The level of control is runtime-manageable and method-specific. Compiler Control supersedes, and is backward compatible, with CompileCommand.
+* [JEP 197: Segmented Code Cache](http://openjdk.java.net/jeps/197)
+  - Divides the code cache into distinct segments, each of which contains compiled code of a particular type, to improve performance and enable future extensions.
 * [JEP 276: Dynamic Linking of Language-Defined Object Models](http://openjdk.java.net/jeps/276)
+  - Dynamically links high-level object operations at run time, such as read a property, write a property, and invoke a function, to the appropriate target method handles. It links these operations to target method handles based on the actual types of the values passed. These object operations are expressed as `invokedynamic` sites.
+  - While `java.lang.invoke` provides a low-level API for dynamic linking of `invokedynamic` call sites, it doesn't provide a way to express higher level operations on objects nor methods that implement them.
 
 ### What’s New for JVM Tuning in JDK 9
 
