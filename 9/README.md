@@ -148,8 +148,11 @@
     + `-XX:+UseCMSCollectionPassing`
   - The command line flag `-XX:+UseParNewGC` no longer has an effect. `ParNew` can only be used with `CMS` and `CMS` requires `ParNew`. Thus, the `-XX:+UseParNewGC` flag has been deprecated and will likely be removed in a future release.
 * [JEP 248: Make G1 the Default Garbage Collector](http://openjdk.java.net/jeps/248)
+  - Makes Garbage-First (G1) the default garbage collector (GC) on 32- and 64-bit server configurations. Using a low-pause collector such as G1 provides a better overall experience, for most users, than a throughput-oriented collector such as the Parallel GC, which was previously the default.
 * [JEP 271: Unified GC Logging](http://openjdk.java.net/jeps/271)
+  - Reimplements Garbage Collection (GC) logging using the unified JVM logging framework introduced in [JEP 158](http://openjdk.java.net/jeps/158). GC logging is re-implemented in a manner consistent with the current GC logging format; however, some differences exist between the new and old formats. More info at [Enable Logging with the JVM Unified Logging Framework](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR-GUID-BE93ABDC-999C-4CB5-A88B-1994AAAC74D5) in Java Platform], Standard Edition Tools Reference.
 * [JEP 291: Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector](http://openjdk.java.net/jeps/291)
+  - Deprecates the Concurrent Mark Sweep (CMS) garbage collector. A warning message is issued when it is requested on the command line, using the `-XX:+UseConcMarkSweepGC` option. The Garbage-First (G1) garbage collector is intended to be a replacement for most uses of CMS.
 
 ### What’s New for Core Libraries in JDK 9
 
