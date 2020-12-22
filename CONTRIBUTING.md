@@ -26,7 +26,7 @@ participating in it, you are expected to keep this code. Please report any unacc
 Before creating enhancement suggestions, please check [this list](#before-submitting-an-enhancement-suggestion) as you
 might find out that you don't need to create one. When you are creating an enhancement suggestion, please
 [include as many details as possible](#how-do-i-submit-a-good-enhancement-suggestion). Fill in
-[the template](https://github.com/lealceldeiro/gms/blob/master/.github/ISSUE_TEMPLATE/feature_request.md).
+[the template](https://github.com/lealceldeiro/java-release-notes/blob/master/.github/ISSUE_TEMPLATE/enhancement.md).
 
 #### Before Submitting An Enhancement Suggestion
 
