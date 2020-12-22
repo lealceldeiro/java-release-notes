@@ -54,8 +54,15 @@
 ### What’s New for Internationalization in JDK 9
 
 * [JEP 267: Unicode 8.0](http://openjdk.java.net/jeps/267)
+  - Supports [Unicode 8.0](http://www.unicode.org/versions/Unicode8.0.0/). JDK 8 supported Unicode 6.2.
+  - The Unicode [6.3](http://www.unicode.org/versions/Unicode6.3.0), [7.0](http://www.unicode.org/versions/Unicode7.0.0) and 8.0 standards combined introduced 10,555 characters, 29 scripts, and 42 blocks, all of which are supported in JDK 9.
 * [JEP 252: CLDR Locale Data Enabled by Default](http://openjdk.java.net/jeps/252)
+  - Uses the Common Locale Data Repository's (CLDR) XML-based locale data, first added in JDK 8, as the default locale data in JDK 9. In previous releases, the default was JRE.
+  - To enable behavior compatible with JDK 8, set the system property `java.locale.providers` to a value with COMPAT ahead of CLDR.
+  - More info at [CLDR Locale Data Enabled by Default](https://docs.oracle.com/javase/9/intl/internationalization-enhancements-jdk-9.htm#JSINT-GUID-9DCDB41C-A989-4220-8140-DBFB844A0FCA) in Java Platform, Standard Edition Internationalization Guide.
 * [JEP 226: UTF-8 Properties Files](http://openjdk.java.net/jeps/226)
+  - Loads properties files in UTF-8 encoding. In previous releases, ISO-8859-1 encoding was used when loading property resource bundles. UTF-8 is a much more convenient way to represent non-Latin characters.
+  - Most existing properties files should not be affected.
  
 ### What’s New for the JDK 9 Installer
 
