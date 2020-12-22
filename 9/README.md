@@ -43,9 +43,13 @@
 ### What’s New for Javadoc in JDK 9
 
 * [JEP 221: Simplified Doclet API](http://openjdk.java.net/jeps/221)
+  - Replaces the old Doclet API with a new simplified API that leverages other standard, existing APIs. The standard doclet has been rewritten to use the new [Doclet API](https://docs.oracle.com/javase/9/docs/api/jdk/javadoc/doclet/package-summary.html).
 * [JEP 224: HTML5 Javadoc](http://openjdk.java.net/jeps/224)
+  - Supports generating HTML5 output. To get fully compliant HTML5 output, any HTML content provided in documentation comments must be compliant with HTML5.
 * [JEP 225: Javadoc Search](http://openjdk.java.net/jeps/225)
+  - Provides a search box to the generated API documentation. This search box can be used to find program elements, tagged words, and phrases within the documentation.
 * [JEP 261: Module System](http://openjdk.java.net/jeps/261)
+  - Supports documentation comments in module declarations. Includes new command-line options to configure the set of modules to be documented and generates a new summary page for any modules being documented.
 
 ### What’s New for Internationalization in JDK 9
 
