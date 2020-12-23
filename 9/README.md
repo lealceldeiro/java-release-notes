@@ -40,6 +40,32 @@
   - Complete the removal, begun in Java SE 8, of the underscore from the set of legal identifier names.
   - Add support for private interface methods.
 
+### What’s New for Core Libraries in JDK 9
+
+* [JEP 102: Process API Updates](http://openjdk.java.net/jeps/102)
+  - Improves the API for controlling and managing operating system processes.
+  - The `ProcessHandle` class provides the process's native process ID, arguments, command, start time, accumulated CPU time, user, parent process, and descendants. The class can also monitor processes' liveness and destroy processes. With the `ProcessHandle.onExit` method, the asynchronous mechanisms of the `CompletableFuture` class can perform an action when the process exits.
+  - More info at [Process API](https://docs.oracle.com/javase/9/core/process-api1.htm#JSCOR-GUID-6FAB2491-FD4E-42B4-A883-DCD181A1CE3E) in *Java Platform, Standard Edition Java Core Libraries Developer's Guide*, [`java.lang.Process`](https://docs.oracle.com/javase/9/docs/api/java/lang/Process.html), and [`java.lang.ProcessHandle`](https://docs.oracle.com/javase/9/docs/api/java/lang/ProcessHandle.html).
+* [JEP 193: Variable Handles](http://openjdk.java.net/jeps/193)
+  - Defines a standard means to invoke the equivalents of [`java.util.concurrent.atomic`](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/atomic/package-summary.html) and `sun.misc.Unsafe` operations upon object fields and array elements.
+  - Defines a standard set of fence operations, which consist of [`VarHandle`](https://docs.oracle.com/javase/9/docs/api/java/lang/invoke/VarHandle.html) static methods that enable fine-grained control of memory ordering. This is an alternative to `sun.misc.Unsafe`, which provides a nonstandard set of fence operations.
+  - Defines a standard reachability fence operation to ensure that a referenced object remains strongly reachable.
+* [JEP 254: Compact Strings](http://openjdk.java.net/jeps/254)
+  - Adopts a more space-efficient internal representation for strings. Previously, the `String` class stored characters in a `char` array, using two bytes (16 bits) for each character. The new internal representation of the `String class` is a `byte` array plus an encoding-flag field.
+  - This is purely an implementation change, with no changes to existing public interfaces.
+* [JEP 264: Platform Logging API and Service](http://openjdk.java.net/jeps/264)
+* [JEP 266: More Concurrency Updates](http://openjdk.java.net/jeps/266)
+* [JEP 268: XML Catalogs](http://openjdk.java.net/jeps/268)
+* [JEP 269: Convenience Factory Methods for Collections](http://openjdk.java.net/jeps/269): Makes it easier to create instances of collections and maps with small numbers of elements. New static factory methods on the List, Set, and Map interfaces make it simpler to create immutable instances of those collections. i.e.: `Set<String> alphabet = Set.of("a", "b", "c");`
+* [JEP 274: Enhanced Method Handles](http://openjdk.java.net/jeps/274)
+* [JEP 277: Enhanced Deprecation](http://openjdk.java.net/jeps/277): Revamps the @Deprecated annotation to provide better information about the status and intended disposition of an API in the specification. Two new elements have been added:
+  - `@Deprecated(forRemoval=true)` indicates that the API will be removed in a future release of the Java SE platform.
+  - `@Deprecated(since="version")` contains the Java SE version string that indicates when the API element was deprecated, for those deprecated in Java SE 9 and beyond.
+* [JEP 285: Spin-Wait Hints](http://openjdk.java.net/jeps/285)
+* [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290)
+* [JEP 259: Stack-Walking API](http://openjdk.java.net/jeps/259)
+* [JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP](https://bugs.openjdk.java.net/browse/JDK-8044086)
+
 ### What’s New for Javadoc in JDK 9
 
 * [JEP 221: Simplified Doclet API](http://openjdk.java.net/jeps/221)
@@ -164,24 +190,6 @@
   - Reimplements Garbage Collection (GC) logging using the unified JVM logging framework introduced in [JEP 158](http://openjdk.java.net/jeps/158). GC logging is re-implemented in a manner consistent with the current GC logging format; however, some differences exist between the new and old formats. More info at [Enable Logging with the JVM Unified Logging Framework](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR-GUID-BE93ABDC-999C-4CB5-A88B-1994AAAC74D5) in Java Platform], Standard Edition Tools Reference.
 * [JEP 291: Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector](http://openjdk.java.net/jeps/291)
   - Deprecates the Concurrent Mark Sweep (CMS) garbage collector. A warning message is issued when it is requested on the command line, using the `-XX:+UseConcMarkSweepGC` option. The Garbage-First (G1) garbage collector is intended to be a replacement for most uses of CMS.
-
-### What’s New for Core Libraries in JDK 9
-
-* [JEP 102: Process API Updates](http://openjdk.java.net/jeps/102)
-* [JEP 193: Variable Handles](http://openjdk.java.net/jeps/193)
-* [JEP 254: Compact Strings](http://openjdk.java.net/jeps/254)
-* [JEP 264: Platform Logging API and Service](http://openjdk.java.net/jeps/264)
-* [JEP 266: More Concurrency Updates](http://openjdk.java.net/jeps/266)
-* [JEP 268: XML Catalogs](http://openjdk.java.net/jeps/268)
-* [JEP 269: Convenience Factory Methods for Collections](http://openjdk.java.net/jeps/269): Makes it easier to create instances of collections and maps with small numbers of elements. New static factory methods on the List, Set, and Map interfaces make it simpler to create immutable instances of those collections. i.e.: `Set<String> alphabet = Set.of("a", "b", "c");`
-* [JEP 274: Enhanced Method Handles](http://openjdk.java.net/jeps/274)
-* [JEP 277: Enhanced Deprecation](http://openjdk.java.net/jeps/277): Revamps the @Deprecated annotation to provide better information about the status and intended disposition of an API in the specification. Two new elements have been added:
-  - `@Deprecated(forRemoval=true)` indicates that the API will be removed in a future release of the Java SE platform.
-  - `@Deprecated(since="version")` contains the Java SE version string that indicates when the API element was deprecated, for those deprecated in Java SE 9 and beyond.
-* [JEP 285: Spin-Wait Hints](http://openjdk.java.net/jeps/285)
-* [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290)
-* [JEP 259: Stack-Walking API](http://openjdk.java.net/jeps/259)
-* [JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP](https://bugs.openjdk.java.net/browse/JDK-8044086)
 
 ### What's New for Nashorn in JDK 9
 
