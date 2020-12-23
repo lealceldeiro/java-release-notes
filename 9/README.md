@@ -201,12 +201,34 @@
 ### What’s New for Client Technologies in JDK 9
 
 * [JEP 251: Multi-Resolution Images](http://openjdk.java.net/jeps/251)
+  - Enables a set of images with different resolutions to be encapsulated into a single multiresolution image. This could be useful for applications to adapt to display devices whose resolutions may vary from approximately 96dpi to 300dpi during run time.
+  - The interface [`java.awt.image.MultiResolutionImage`](https://docs.oracle.com/javase/9/docs/api/java/awt/image/MultiResolutionImage.html) encapsulates a set of images with different resolutions into a single multiresolution image, which enables applications to easily manipulate and display images with resolution variants.
 * [JEP 253: Prepare JavaFX UI Controls and CSS APIs for Modularization](https://openjdk.java.net/jeps/253)
+  - Provides public APIs for JavaFX UI controls and CSS functionality that were previously available only through internal packages but are now inaccessible due to modularization.
+  - The new package [`javafx.scene.control.skin`](https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/skin/package-summary.html) consists of a set of classes that provides a default implementation for the skin (or the look) of each UI control.
+  - The new class [`CssParser`](https://docs.oracle.com/javase/9/docs/api/javafx/css/CssParser.html) is a CSS parser that returns a [`Stylesheet`](https://docs.oracle.com/javase/9/docs/api/javafx/css/Stylesheet.html) object, which gives you more control over the CSS styling of your application. It’s part of the CSS API (the [`javafx.css`](https://docs.oracle.com/javase/9/docs/api/javafx/css/package-summary.html) package). The CSS API includes new support classes, including a set of standard converters used by the parser; more info at [`javafx.css.converter`](https://docs.oracle.com/javase/9/docs/api/javafx/css/converter/package-summary.html) package.
 * [JEP 256: BeanInfo Annotations](http://openjdk.java.net/jeps/256)
+  - Replaces the `@beaninfo` Javadoc tag with the annotation types [`JavaBean`](https://docs.oracle.com/javase/9/docs/api/java/beans/JavaBean.html), [`BeanProperty`](https://docs.oracle.com/javase/9/docs/api/java/beans/BeanProperty.html), and [`SwingContainer`](https://docs.oracle.com/javase/9/docs/api/java/beans/BeanProperty.html).
+  - These annotation types set the corresponding feature attributes during BeanInfo generation at runtime. Thus, you can more easily specify these attributes directly in Bean classes instead of creating a separate BeanInfo class for every Bean class. It also enables the removal of automatically generated classes, which makes it easier to modularize the client library.
 * [JEP 262: TIFF Image I/O](http://openjdk.java.net/jeps/262)
+  - Adds Tag Image File Format (TIFF) reading and writing as standard to the package [`javax.imageio`](https://docs.oracle.com/javase/9/docs/api/javax/imageio/package-summary.html). The new package [`javax.imageio.plugins.tiff`](https://docs.oracle.com/javase/9/docs/api/javax/imageio/plugins/tiff/package-summary.html) provides classes that simplify the optional manipulation of TIFF metadata.
 * [JEP 263: HiDPI Graphics on Windows and Linux](http://openjdk.java.net/jeps/263)
+  - Automatically scales and sizes AWT and Swing components for High Dots Per Inch (HiDPI) displays on Windows and Linux.
+  - The JDK already supports HiDPI "retina displays" on OS X.
+  - Prior to this release, on Windows and Linux, Java applications were sized and rendered based on pixels, even on HiDPI displays that can have pixel densities two to three times as high as traditional displays. This led to GUI components and windows that were too small to read or use.
 * [JEP 272: Platform-Specific Desktop Features](http://openjdk.java.net/jeps/272)
+  - Adds additional methods to the class [`java.awt.Desktop`](https://docs.oracle.com/javase/9/docs/api/java/awt/Desktop.html) that enable you to interact with the desktop, including the following:
+    - Show custom About and Preferences windows.
+    - Handle requests to open or print a list of files.
+    - Handle requests to open a URL.
+    - Open the native help viewer application.
+    - Set the default menu bar.
+    - Enable or disable the application to be suddenly terminated.
+  - These new methods replace the functionality of the internal APIs contained in the OS X package `com.apple.eawt`, which are not accessible by default in JDK 9. Note that the package `com.apple.eio` is no longer accessible.
 * [JEP 283: Enable GTK 3 on Linux](http://openjdk.java.net/jeps/283)
+  - Enables Java graphical applications, whether based on JavaFX, Swing, or Abstract Window Toolkit (AWT), to use either the GTK+ version 2 or version 3 on Linux or Solaris.
+  - By default, the JDK on Linux or Solaris uses GTK+ 2 if available; if not, it uses GTK+ 3.
+  - To use a specific version of GTK+, the system property `jdk.gtk.version` can be set. This system property may have a value of `2`, `2.2`, or `3`. This property must be set before your application loads GTK+, and it must not conflict with a GTK+ version that may have been loaded earlier by another toolkit.
 
 ## [Important Changes and Information](https://www.oracle.com/technetwork/java/javase/9-relnote-issues-3704069.html)
 
