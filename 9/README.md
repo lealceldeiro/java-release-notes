@@ -63,13 +63,28 @@
   - Makes it easier to create instances of collections and maps with small numbers of elements. New static factory methods on the `List`, `Set`, and `Map` interfaces make it simpler to create immutable instances of those collections. i.e.: `Set<String> alphabet = Set.of("a", "b", "c");`
   - More info at [Creating Immutable Lists, Sets, and Maps](http://www.oracle.com/pls/topic/lookup?ctx=javase9&id=JSCOR-GUID-02B85009-276A-4C5E-A931-A26BF5F1F851) in Java Platform, Standard Edition Java Core Libraries Developer's Guide. For API documentation, see [Immutable Set Static Factory Methods](https://docs.oracle.com/javase/9/docs/api/java/util/Set.html#immutable), [Immutable Map Static Factory Methods](https://docs.oracle.com/javase/9/docs/api/java/util/Map.html#immutable), and [Immutable List Static Factory Methods](https://docs.oracle.com/javase/9/docs/api/java/util/List.html#immutable).
 * [JEP 274: Enhanced Method Handles](http://openjdk.java.net/jeps/274)
-* [JEP 277: Enhanced Deprecation](http://openjdk.java.net/jeps/277): Revamps the @Deprecated annotation to provide better information about the status and intended disposition of an API in the specification. Two new elements have been added:
-  - `@Deprecated(forRemoval=true)` indicates that the API will be removed in a future release of the Java SE platform.
-  - `@Deprecated(since="version")` contains the Java SE version string that indicates when the API element was deprecated, for those deprecated in Java SE 9 and beyond.
+  - Enhances the `MethodHandle`, `MethodHandles`, and `MethodHandles.Lookup` classes of the `java.lang.invoke` package to ease common use cases and enable better compiler optimizations. Additions include:
+    + In the `MethodHandles` class in the [`java.lang.invoke`](https://docs.oracle.com/javase/9/docs/api/java/lang/invoke/package-summary.html) package, provide new `MethodHandle` combinators for *loops* and *try*/*finally* blocks.
+    + Enhance the `MethodHandle` and `MethodHandles` classes with new `MethodHandle` combinators for argument handling.
+    + Implement new lookups for interface methods and, optionally, super constructors in the `MethodHandles.Lookup` class.
+* [JEP 277: Enhanced Deprecation](http://openjdk.java.net/jeps/277)
+  - Revamps the @Deprecated annotation to provide better information about the status and intended disposition of an API in the specification. Two new elements have been added:
+    + `@Deprecated(forRemoval=true)` indicates that the API will be removed in a future release of the Java SE platform.
+    + `@Deprecated(since="version")` contains the Java SE version string that indicates when the API element was deprecated, for those deprecated in Java SE 9 and beyond.
+  - [`jdeprscan`](https://docs.oracle.com/javase/9/tools/jdeprscan.htm#JSWOR-GUID-2B7588B0-92DB-4A88-88D4-24D183660A62) can be used to scan a class library (JAR file) for uses of deprecated JDK API elements.
+  - More info at [Enhanced Deprecation](https://docs.oracle.com/javase/9/core/enhanced-deprecation1.htm#JSCOR-GUID-23B13A9E-2727-42DC-B03A-E374B3C4CE96) in Java Platform, Standard Edition Java Core Libraries Developer's Guide.
 * [JEP 285: Spin-Wait Hints](http://openjdk.java.net/jeps/285)
+  - Defines an API that enables Java code to hint that a spin loop is executing. A spin loop repeatedly checks to see if a condition is true, such as when a lock can be acquired, after which some computation can be safely performed followed by the release of the lock. This API is purely a hint, and carries no semantic behavior requirements. See the method [`Thread.onSpinWait`](https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.html#onSpinWait--).
 * [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290)
+  - Allows incoming streams of object-serialization data to be filtered to improve both security and robustness. Object-serialization clients can validate their input more easily, and exported Remote Method Invocation (RMI) objects can validate invocation arguments more easily as well.
+  - Serialization clients implement a filter interface that is set on an `ObjectInputStream`. For RMI, the object is exported through a `RemoteServerRef` that sets the filter on the `MarshalInputStream` to validate the invocation arguments as they are unmarshalled.
 * [JEP 259: Stack-Walking API](http://openjdk.java.net/jeps/259)
+  - Provides a stack-walking API that allows easy filtering and lazy access to the information in stack traces.
+  - The API supports both short walks that stop at a frame that matches given criteria, and long walks that traverse the entire stack. Stopping at a frame that matches a given criteria avoids the cost of examining all the frames if the caller is interested only in the top frames on the stack. The API enables access to `Class` objects when the stack walker is configured to do so.
+  - More info at [`java.lang.Stackwalker`](https://docs.oracle.com/javase/9/docs/api/java/lang/StackWalker.html).
 * [JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP](https://bugs.openjdk.java.net/browse/JDK-8044086)
+  - Updates the JDK to support the 2.11.0 version of the Xerces parser. There is no change to the public JAXP API.
+  - The changes are in the following categories of Xerces 2.11.0: Datatypes, DOM L3 Serializer, XPointer, Catalog Resolver, and XML Schema Validation (including bug fixes, but not the XML Schema 1.1 development code).
 
 ### What’s New for Javadoc in JDK 9
 
