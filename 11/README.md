@@ -296,8 +296,18 @@ _core-libs/java.lang_
 
 The values of `java.home`, `user.home`, `user.dir`, and `user.name` properties are cached at startup. Changes made using `System::setProperty` after startup will not change the behavior of APIs in the java.base module.
 
-_core-libs/java.lang.module_
+_security-libs/java.security_
 
-**Change to Policy for the Default Set of Modules Resolved When Compiling or Running Code on the Class Path**
+**Added GoDaddy Root Certificates**
 
-The default set of root modules when compiling code or running code on the class path has changed in JDK 11 to be all observable system modules that export an API. The only observable change is that the `java.se` module is no longer resolved by default.
+**Removal of Baltimore Cybertrust Code Signing CA**
+
+**Removal of SECOM Root Certificate**
+
+**Added T-Systems, GlobalSign and Starfield Services Root Certificates**
+
+**Removal of AOL and Swisscom Root Certificates**
+
+**Removal of Several Symantec Root CAs**
+
+**Added Entrust Root Certificates**
