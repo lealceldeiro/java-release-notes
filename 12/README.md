@@ -28,6 +28,44 @@ String result = fmt.format(1000);  // 1K
 [Square Character Support for Japanese New Era](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211398)
 
 *hotspot/gc*
+
 [ZGC Concurrent Class Unloading](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8214897)
 
 [Allocation of Old Generation of Java Heap on Alternate Memory Devices](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8202286)
+
+*hotspot/runtime*
+
+[HotSpot Windows OS Detection Correctly Identifies Windows Server 2019](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211106)
+
+[Command-Line Flag -XX+ExtensiveErrorReports](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211845)
+
+*security-libs/java.security*
+
+[`disallow` and `allow` Options for `java.security.manager` System Property](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8191053)
+
+[`-groupname` Option Added to keytool Key Pair Generation](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8213400)
+
+For example, keytool `-genkeypair -keyalg EC -groupname secp384r1` will generate an `EC` key pair by using the `secp384r1` curve. Because there might be multiple curves with the same size, using the `-groupname` option is preferred over the `-keysize` option.
+
+[New Java Flight Recorder (JFR) Security Events](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8148188)
+
+These events are disabled by default and can be enabled via the JFR configuration files or via standard JFR options.
+
+- `jdk.SecurityPropertyModification`
+- `jdk.TLSHandshake`
+- `jdk.X509Validation`
+- `jdk.X509Certificate`
+
+[Customizing PKCS12 keystore Generation](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8076190)
+
+*security-libs/javax.net.ssl*
+
+[ChaCha20 and Poly1305 TLS Cipher Suites](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8140466)
+
+Refer to the "Java Secure Socket Extension (JSSE) Reference Guide" for details on these new TLS cipher suites. See (JDK-8140466](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8140466)
+
+*security-libs/org.ietf.jgss:krb5*
+
+[Support for dns_canonicalize_hostname in krb5.conf](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8210821)
+
+The `dns_canonicalize_hostname` [flag](https://web.mit.edu/kerberos/krb5-devel/doc/admin/conf_files/krb5_conf.html) in the `krb5.conf` configuration file is now supported by the JDK Kerberos implementation. When set to `true`, a short hostname in a service principal name will be canonicalized to a fully qualified domain name if available. Otherwise, no canonicalization is performed. The default value is `true`.
