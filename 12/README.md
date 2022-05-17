@@ -22,3 +22,12 @@
 NumberFormat fmt = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);
 String result = fmt.format(1000);  // 1K
 ```
+
+*core-libs/java.util:i18n*
+
+[Square Character Support for Japanese New Era](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211398)
+
+*hotspot/gc*
+[ZGC Concurrent Class Unloading](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8214897)
+
+[Allocation of Old Generation of Java Heap on Alternate Memory Devices](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8202286)
