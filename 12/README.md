@@ -83,3 +83,31 @@ The `--ignore-missing-deps` option can be used to suppress missing dependence er
 [JEP 325 Switch Expressions (Preview)](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8192963)
 
 ## Removed Features and Options
+
+*client-libs/java.awt*
+
+[Removal of com.sun.awt.SecurityWarning Class](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8210692)
+
+*core-libs/java.io*
+
+[Removal of `finalize` Methods from `FileInputStream` and `FileOutputStream`](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8192939)
+
+*core-libs/java.util.jar*
+
+[Removal of `finalize` Method in `java.util.ZipFile`/`Inflator`/`Deflator`](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8212129)
+
+*infrastructure/build*
+
+[Dropped the YY.M Vendor Version String from Oracle-Produced Builds](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211726)
+
+As of JDK 12, JDK builds from Oracle will no longer include a vendor version string
+
+*security-libs/java.security*
+
+[Removal of GTE CyberTrust Global Root](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8195793)
+
+*tools/javac*
+
+[Removal of `javac` Support for 6/1.6 source, target, and release Values](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8028563)
+
+## Deprecated Features and Options
