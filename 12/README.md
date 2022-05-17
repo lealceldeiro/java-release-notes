@@ -69,3 +69,17 @@ Refer to the "Java Secure Socket Extension (JSSE) Reference Guide" for details o
 [Support for dns_canonicalize_hostname in krb5.conf](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8210821)
 
 The `dns_canonicalize_hostname` [flag](https://web.mit.edu/kerberos/krb5-devel/doc/admin/conf_files/krb5_conf.html) in the `krb5.conf` configuration file is now supported by the JDK Kerberos implementation. When set to `true`, a short hostname in a service principal name will be canonicalized to a fully qualified domain name if available. Otherwise, no canonicalization is performed. The default value is `true`.
+
+*tools*
+
+[`jdeps --print-module-deps` Reports Transitive Dependences](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8213909)
+
+The `--no-recursive` option can be used to request non-transitive dependence analysis.
+
+The `--ignore-missing-deps` option can be used to suppress missing dependence errors.
+
+*tools/javac*
+
+[JEP 325 Switch Expressions (Preview)](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8192963)
+
+## Removed Features and Options
