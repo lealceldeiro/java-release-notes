@@ -121,3 +121,67 @@ As of JDK 12, JDK builds from Oracle will no longer include a vendor version str
 [Deprecated Default Keytool `-keyalg` Value](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8212003)
 
 ## Other Notes
+
+*client-libs/javax.swing*
+
+[GTK+ 3.20 and Later Unsupported by Swing](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8218469)
+
+*core-libs/java.lang*
+
+[Initial Value of `user.timezone` System Property Changed](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8185496)
+
+The initial value of the `user.timezone` system property is undefined unless set using a command line argument, for example, `-Duser.timezone="America/New_York"`. The first time the default timezone is needed, if `user.timezone` is undefined or empty the timezone provided by the operating system is used. Previously, the initial value was the empty string. In JDK 12, `System.getProperty("user.timezone")` may return null.
+
+*core-libs/java.net*
+
+[Better HTTP Redirection Support](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8196902)
+
+[Changed `URLPermission` Behavior with Query or Fragments in URL String](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8213616)
+
+*core-libs/java.time*
+
+[Support New Japanese Era in `java.time.chrono.JapaneseEra`](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8212941)
+
+*core-libs/java.util*
+
+[Changed `Properties.loadFromXML` to Comply with Specification](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8213325)
+
+*core-libs/javax.naming*
+
+[LDAPS Communication Failure](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211107)
+
+*hotspot/gc*
+
+[G1 May Uncommit Memory During Marking Cycle](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-6490394)
+
+*hotspot/jvmti*
+
+[`can_pop_frame` and `can_force_early_return` Capabilities are Disabled if JVMCI Compiler is Used](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8218025)
+
+Being tracked here: https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8218885
+
+*infrastructure/build*
+
+[Linux Native Code Checks](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8199552)
+
+Additional safeguards to protect against buffer overruns in native code have been enabled on Linux. If a buffer overrun is encountered, the system will write the message "stack smashing detected" and the program will exit. Issues of this type should be reported to your vendor.
+
+*security-libs/java.security*
+
+[Added Additional TeliaSonera Root Certificate](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8210432)
+
+[Removal of AOL and Swisscom Root Certificates](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8203230)
+
+*security-libs/javax.crypto*
+
+[Change to X25519 and X448 Encoded Private Key Format](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8213363)
+
+*security-libs/javax.net.ssl*
+
+[Removed TLS v1 and v1.1 from SSLContext Required Algorithms](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8214140)
+
+[Disabled TLS anon and NULL Cipher Suites](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211883)
+
+[Disabled All DES TLS Cipher Suites](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8208350)
+
+[Distrust TLS Server Certificates Anchored by Symantec Root CAs](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8207258)
