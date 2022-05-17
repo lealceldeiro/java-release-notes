@@ -111,3 +111,13 @@ As of JDK 12, JDK builds from Oracle will no longer include a vendor version str
 [Removal of `javac` Support for 6/1.6 source, target, and release Values](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8028563)
 
 ## Deprecated Features and Options
+
+*hotspot/runtime*
+
+[Obsoleted `-XX+`/`-MonitorInUseLists`](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8211384)
+
+*security-libs/java.security*
+
+[Deprecated Default Keytool `-keyalg` Value](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html#JDK-8212003)
+
+## Other Notes
