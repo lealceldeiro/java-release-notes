@@ -30,7 +30,8 @@ A new formatter pattern, letter 'B', and its supporting method have been added t
 `java.time.format.DateTimeFormatter`/`DateTimeFormatterBuilder` classes. Example:
 
 ```shell
-DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm B").format(LocalDateTime.of(2022, 6, 21, 17, 42)); // "2022-06-21 05:42 in the afternoon"
+DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm B")
+                 .format(LocalDateTime.of(2022, 6, 21, 17, 42)); // "2022-06-21 05:42 in the afternoon"
 ```
 
 *core-libs/java.util.stream*
@@ -147,7 +148,9 @@ DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm B").format(LocalDateTime.of(2022, 
 
 #### [Support Supplementary Characters in String Case Insensitive Operations](https://www.oracle.com/java/technologies/javase/16-relnote-issues.html#JDK-8248655)
 
-For example, `"\ud801\udc00".equalsIgnoreCase("\ud801\udc28")` returns `true`, because `'𐐀'` (`"\ud801\udc00"`) and
+For example, `"\ud801\udc00".equalsIgnoreCase("\ud801\udc28")` returns `true`,
+
+because `'𐐀'` (`"\ud801\udc00"`) and
 `'𐐨'` (`"\ud801\udc28"`) are equal to each other character in case-insensitive comparison.
 
 #### [Module::getPackages Returns the Set of Package Names in This Module](https://www.oracle.com/java/technologies/javase/16-relnote-issues.html#JDK-8256063)
