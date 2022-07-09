@@ -14,3 +14,4 @@
 ## Useful readings
 
 * [Oracle tutorials](https://docs.oracle.com/javase/tutorial/essential/TOC.html)
+* [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
