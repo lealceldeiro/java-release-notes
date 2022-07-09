@@ -271,4 +271,4 @@ describes use cases and provides examples.
 
 *core-libs/java.lang*
 
-#### [Less Ambiguous Processing of ProcessBuilder Quotes on Windows](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#JDK-8250568) 
+#### [Less Ambiguous Processing of ProcessBuilder Quotes on Windows](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#JDK-8250568)
